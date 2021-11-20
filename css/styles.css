@@ -9,6 +9,8 @@
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --main-border-color: #ececec;
   --card-border-color: #eeeeee;
+  --icon-back-ground: #f5f4fa;
+  --social-link-color: #afb1b8;
 }
 
 body {
@@ -119,7 +121,19 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
+}
+
+.letter-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.smartphone-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* ----------------------------------Main content-------------------------------- */
@@ -128,6 +142,14 @@ img {
 .hero {
   padding: 200px 0;
   background-color: var(--main-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .hero-title {
@@ -145,6 +167,7 @@ img {
 }
 
 .hero-btn {
+  display: block;
   border-radius: 4px;
   margin: 0 auto;
   padding: 10px 32px;
@@ -178,6 +201,17 @@ img {
 
 .advantages-list {
   display: flex;
+}
+
+.advantages-card {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--icon-back-ground);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advantages-item:not(:last-child) {
@@ -232,6 +266,7 @@ img {
 
 .about-team {
   background-color: var(--secondary-background-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .team-list {
@@ -240,6 +275,13 @@ img {
 
 .team-item {
   background-color: var(--first-title-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .team-item:not(:last-child) {
@@ -273,12 +315,98 @@ img {
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--first-title-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  fill: var(--social-link-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-text-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--first-title-color);
+}
+
+/* ---------------About clients------------------------------------ */
+
+.clients-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-list {
+  display: flex;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--social-link-color);
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.client-icon {
+  fill: var(--social-link-color);
+}
+
+.clients-link:hover .client-icon,
+.clients-link:focus .client-icon {
+  fill: var(--accent-text-color);
 }
 
 /* --------------------Footer--------------------------------------------------------------- */
@@ -305,6 +433,11 @@ img {
   color: var(--first-title-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .address-list {
   display: inline-block;
 }
@@ -329,6 +462,60 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
+}
+
+.footer-social-container {
+  margin-left: 70px;
+}
+
+.footer-social-text {
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--first-title-color);
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-icon {
+  fill: var(--first-title-color);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-text-color);
+}
+
+.footer-social-link:hover .footer-social-icon,
+.footer-social-link:focus .footer-social-icon {
+  fill: var(--first-title-color);
 }
 
 /* FILTER ---------------------------------------------
@@ -363,6 +550,7 @@ img {
 .filter-btn:focus {
   color: var(--first-title-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* ----------------------------Filter list------------------------- */
@@ -389,6 +577,10 @@ img {
 
 .filter-item:nth-child(n + 7) {
   margin-bottom: 0;
+}
+
+.filter-item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .filter-item-title {
